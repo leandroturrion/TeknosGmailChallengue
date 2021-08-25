@@ -1,0 +1,179 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 0 1rem;
+}
+
+
+
+li{
+  width: 100%;
+}
+.myButton {
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:white; 
+	background-color:#ededed;
+	border-radius:30px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#010303;
+	font-family:Arial;
+	font-size:17px;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+
+.bi-inbox-fill , .bi-star-fill , .bi-clock-fill , .bi-arrow-90deg-right , .bi-file-earmark-ppt-fill,
+.bi-arrow-right-square-fill, .bi-chat-dots , .bi-stopwatch, .bi-inboxes-fill , .bi-exclamation-octagon-fill , .bi-camera-video-fill , .bi-keyboard-fill {
+  margin-right: 10px;
+  
+}
+
+.fa-plus{
+  color: red;
+}
+
+.navbar{
+  margin-top: 15px;
+  border: 1px solid rgb(236, 233, 233) ;
+}
+
+.navbar__item{
+  margin-top: 15px;
+  text-decoration:none;
+  color: rgb(82, 78, 78) ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size:small;
+}
+
+.bi-arrow-right-square-fill , .bi-chat-dots, .bi-stopwatch , .bi-inboxes-fill , .bi-exclamation-octagon-fill{
+  color: rgb(82, 78, 78) ;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: small;
+}
+
+.bi-search , .bi-sliders , .bi-question-circle , .bi-gear, .bi-grid-3x3-gap{
+  font-size: 0.7em;
+  color: hsl(0, 2%, 31%);
+  align-items: center;
+ 
+}
+
+#recib {
+  color: rgb(255, 0, 0);
+}
+
+a:active {
+  color: rgb(0, 0, 0);
+}
+
+h2, h3{
+  font-size: small;
+  font-weight: bold;
+  margin-top: 15px;
+}
+h2, h3, img {
+  margin-left: 20px;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+button {
+  cursor: pointer;
+  border-width: 0;
+  background-color: #0000;
+  
+}
+
+.navbar1 {
+  display: flex;
+  align-items: center;
+  column-gap: 10%;
+  background-color: #0000;
+  color: #999;
+  font-size: 2em;
+  padding: 0.5rem;
+  border: 1px solid rgb(236, 233, 233) ;
+}
+
+.header__button{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: black;
+}
+
+.header__section {
+  display: flex;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+}
+
+.filter__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0 1em;
+}
+
+.filter__button--right {
+  right: 0;
+}
+
+.header__section--right {
+  margin-left: auto;
+}
+
+.filter__input {
+  height: 1.5em;
+  width: 20em;
+  border-width: 0;
+  background-color: #ddd;
+  border-radius: 2em;
+  font-size: inherit;
+  
+}
+
+
+
+ul{
+ list-style-type: none;
+}
+
+.btn{
+  padding-left: 1px;
+
+}
+.imgPerfil{
+  border-radius: 50%;
+  border: 1px solid ;
+  width: 30px;
+  height: 30px;
+}
+.imgPerfilH{
+  border-radius: 50%;
+  border: 1px solid ;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+.hangouts{
+  border: 1px solid rgb(236, 233, 233) ;
+
+}

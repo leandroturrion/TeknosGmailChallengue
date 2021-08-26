@@ -5,6 +5,7 @@
   <title>Gmail Teknos</title>
   <meta charset="UTF-8" />
   <script src="https://kit.fontawesome.com/572b6f1886.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="img/logo-Gmail-1.png"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -28,7 +29,7 @@
     <div class="header__section">
       <div class="filter" id="filter">
         <button class="filter__button">
-          <i class="bi bi-search" placeholder="Buscar en el correo electronico"></i>
+          <i class="bi bi-search"></i>
         </button>
         <input type="text" id="filterInput" class="filter__input" />
         <button class="filter__button--right filter__button">
@@ -46,60 +47,75 @@
       </button>
       <button class="header__button">
         <i class="bi bi-grid-3x3-gap"></i>
-
       </button>
       <button>
         <img class="imgPerfil" src="img/WhatsApp Image 2021-06-02 at 11.05.34 (3).jpeg" alt="">
-
       </button>
     </div>
   </header>
-  <a href="#" class="myButton"> <i class="fas fa-plus"></i> Redactar</a>
-  <main>
-    <nav class="navbar">
-      <ul class="navbar__list">
-        <li><a class="navbar__item" id="recib" href="#"> <i class="bi bi-inbox-fill"></i> Recibidos</a></li>
-        <li><a class="navbar__item" href="#"><i class="bi bi-star-fill"></i> Destacados</a></li>
-        <li><a class="navbar__item" href="#"><i class="bi bi-clock-fill"></i> Pospuestos</a></li>
-        <li><a class="navbar__item" href="#"><i class="bi bi-arrow-90deg-right"></i> Enviados</a></li>
-        <li><a class="navbar__item" href="#"><i class="bi bi-file-earmark-ppt-fill"></i> Borradores</a></li>
-        <li class="navbar__item">
-          <div class="dropdown">
-            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Más
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-right-square-fill"></i> Importante</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-chat-dots"></i> Chats</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-stopwatch"></i> Programados</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-inboxes-fill"></i> Todos</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-exclamation-octagon-fill"></i> <b>Spam</b></a></li>
+  <!-- Trigger/Open The Modal -->
+<button id="myBtn" class="myButton"><i class="bi bi-plus-lg"></i> Redactar</button>
 
-            </ul>
-          </div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
-        </li>
-      </ul>
-    </nav>
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+<form >
+    <div class="modal1"> 
+         <p class="modalText1">Mensaje Nuevo</p>
+    </div>
+    <div>
+     <p>asdasaadaskajsdklasjljalskjaskljaskljaslksaklklsajsalkjsakldjsakljakslsajddklj</p>
+    </div>
+    <div >
 
+    </div>
+  
 
-    <!--Aca faltan detalles-->
+</form>
 
-
-    <h2>Meet</h2>
-    <ul class="navbar__list">
-      <li><a class="navbar__item" href="#"><i class="bi bi-camera-video-fill"></i> Nueva reunión</a></li>
-      <li><a class="navbar__item" href="#"><i class="bi bi-keyboard-fill"></i> Unierte a una reunión</a></li>
-    </ul>
-
-<div class="hangouts">
-    <h3>Hangouts</h3>
-    <img class="imgPerfilH" src="img/WhatsApp Image 2021-06-02 at 11.05.34 (3).jpeg" alt=""> Leandro</a>
   </div>
 
+</div>
+<button class="myButton" onclick="reset()">
+  resetear
+</button>
+  <main class="row">
+    <div class="col-2">
+      <nav class="navbar">
+        <ul id="contenedorButton" class="navbar__list">
 
+        </ul>
+      </nav>
+      <!--Aca faltan detalles-->
+
+
+      <h2>Meet</h2>
+      <ul class="navbar__list">
+        <li><a class="navbar__item" href="#"><i class="bi bi-camera-video-fill"></i> Nueva reunión</a></li>
+        <li><a class="navbar__item" href="#"><i class="bi bi-keyboard-fill"></i> Unierte a una reunión</a></li>
+      </ul>
+
+      <div class="hangouts">
+        <h3>Hangouts</h3>
+        <img class="imgPerfilH" src="img/WhatsApp Image 2021-06-02 at 11.05.34 (3).jpeg" alt=""> Leandro</a>
+      </div>
+      </div>
+    </div>
+    
+    <div class="col-10">
+
+      <div id="vistaContenedorMails"> </div>
+
+    </div>
   </main>
+
+
+
+
 
   <footer class="footer">
 

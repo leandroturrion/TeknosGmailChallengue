@@ -213,7 +213,7 @@ function cargarButtons() {
       buttons.map((button, i) => {
         console.log('button:', button)
         contenedorButton.innerHTML += `
-       <div id=${button.title} class="listaButtons row">
+       <div id=${button.title} class="listaButtons">
          <a onclick="load(button)" class="col-1 nombreEmail" id=${i}>${button.title}</a>    
         </div>
      `

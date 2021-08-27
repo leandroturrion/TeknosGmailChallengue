@@ -5,7 +5,7 @@
   <title>Gmail Teknos</title>
   <meta charset="UTF-8" />
   <script src="https://kit.fontawesome.com/572b6f1886.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="img/logo-Gmail-1.png"/>
+  <link rel="shortcut icon" href="img/logo-Gmail-1.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -53,36 +53,63 @@
       </button>
     </div>
   </header>
+
+
   <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="myButton"><i class="bi bi-plus-lg"></i> Redactar</button>
+  <button id="myBtn" class="myButton"><i class="bi bi-plus-lg"></i> Redactar</button>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- contenido -->
+    <div class="container">
+      <header>
+        <div class="header__section1 d-flex justify-content-between">
+          <div>
+            <p class="close1">Mensaje nuevo</p>
+          </div>
+          <div>
+            <span class="close">&#9601;</span>
+            <span class="close">&#8599; </i> </span>
+            <span class="close">&times;</span>
+          </div>
+      </header>
+      <div class="input-group input-group-sm ">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Destinatarios</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div class="input-group input-group-sm ">
+        <span class="input-group-text" id="inputGroup-sizing-sm">Asunto</span>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-sm">
+      </div>
+      <div>
+        <textarea class="container1" name="" id="" cols="30" rows="10"></textarea>
+      </div>
+      <footer>
+        <div class="containerFooter">
+          <div class="containerIconFooter">
+            <button id="btn" type="button" class="btn btn-primary">Enviar</button>
+            <i id="btnF" class="fas fa-text-height"></i>
+            <i id="btnF" class="fas fa-link"></i>
+            <i id="btnF" class="fas fa-paperclip"></i>
+            <i id="btnF" class="far fa-smile-beam"></i>
+            <i id="btnF" class="fab fa-google-drive"></i>
+            <i id="btnF" class="fas fa-images"></i>
+            <i id="btnF" class="fas fa-user-secret"></i>
+            <i id="btnF" class="fas fa-pen-fancy"></i>
+            <i id="f2" class="fas fa-trash"></i>
+            <i id="f2" class="fas fa-ellipsis-v"></i>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    
-<form >
-    <div class="modal1"> 
-         <p class="modalText1">Mensaje Nuevo</p>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div>
-     <p>asdasaadaskajsdklasjljalskjaskljaskljaslksaklklsajsalkjsakldjsakljakslsajddklj</p>
-    </div>
-    <div >
-
-    </div>
-  
-
-</form>
-
   </div>
-
-</div>
-<button class="myButton" onclick="reset()">
-  resetear
-</button>
+  </div>
+  <button class="myButton" onclick="reset()">
+    <i class="fas fa-sync-alt"></i> Reiniciar datos
+  </button>
   <main class="row">
     <div class="col-2">
       <nav class="navbar">
@@ -95,17 +122,15 @@
 
       <h2>Meet</h2>
       <ul class="navbar__list">
-        <li><a class="navbar__item" href="#"><i class="bi bi-camera-video-fill"></i> Nueva reunión</a></li>
-        <li><a class="navbar__item" href="#"><i class="bi bi-keyboard-fill"></i> Unierte a una reunión</a></li>
+        <li><a class="navbar__item" href="#"><i class="bi bi-camera-video-fill"></i> New meeting </a></li>
+        <li><a class="navbar__item" href="#"><i class="bi bi-keyboard-fill"></i> Join a meeting</a></li>
       </ul>
 
       <div class="hangouts">
         <h3>Hangouts</h3>
         <img class="imgPerfilH" src="img/WhatsApp Image 2021-06-02 at 11.05.34 (3).jpeg" alt=""> Leandro</a>
       </div>
-      </div>
     </div>
-    
     <div class="col-10">
 
       <div id="vistaContenedorMails"> </div>

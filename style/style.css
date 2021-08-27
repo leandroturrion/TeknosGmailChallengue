@@ -8,10 +8,9 @@
   margin: 0 1rem;
 }
 
-
-
 li{
   width: 100%;
+  list-style-type: none;
 }
 .myButton {
 	box-shadow: 3px 4px 0px 0px #899599;
@@ -31,14 +30,7 @@ li{
   margin-left: 20px;
 }
 
-
-.bi-inbox-fill , .bi-star-fill , .bi-clock-fill , .bi-arrow-90deg-right , .bi-file-earmark-ppt-fill,
-.bi-arrow-right-square-fill, .bi-chat-dots , .bi-stopwatch, .bi-inboxes-fill , .bi-exclamation-octagon-fill , .bi-camera-video-fill , .bi-keyboard-fill {
-  margin-right: 10px;
-  
-}
-
-.fa-plus{
+.bi-plus-lg{
   color: red;
 }
 
@@ -47,21 +39,27 @@ li{
   border: 1px solid rgb(236, 233, 233) ;
 }
 
+.listaMail{
+  margin-top: 20px;
+  border-bottom: 1px solid silver;
+}
+
 .navbar__item{
   margin-top: 15px;
   text-decoration:none;
+  list-style-type: none;
+  color: rgb(82, 78, 78) ;
+  font-weight: bold;
+  font-size: medium;
+}
+.bi-forward-fill, .bi-inbox-fill, .bi-trash , .bi-info-circle-fill, .bi-trash2 , .bi-star-fill , .bi-bookmark  {
   color: rgb(82, 78, 78) ;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size:small;
+  font-size: large;
 }
 
-.bi-arrow-right-square-fill , .bi-chat-dots, .bi-stopwatch , .bi-inboxes-fill , .bi-exclamation-octagon-fill{
-  color: rgb(82, 78, 78) ;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: small;
-}
+
 
 .bi-search , .bi-sliders , .bi-question-circle , .bi-gear, .bi-grid-3x3-gap{
   font-size: 0.7em;
@@ -70,8 +68,12 @@ li{
  
 }
 
-#recib {
+#recib{
   color: rgb(255, 0, 0);
+}
+.fa-sync-alt{
+  color: blue;
+  margin-top: 5px;
 }
 
 a:active {
@@ -140,6 +142,9 @@ button {
   margin-left: auto;
 }
 
+.listaButtons{
+  cursor: pointer;
+}
 .filter__input {
   height: 1.5em;
   width: 20em;
@@ -150,17 +155,27 @@ button {
   
 }
 
+.inbox{
+  color: red;
+}
+
 a{
 text-decoration: none;
-color: #010303;
+color: #000000;
 
 }
+
+.listaButtons:hover{
+  border-radius: 3px;
+  color: red;
+  background-color: rgb(233, 232, 232);
+}
+
 i{
   float: left;
   margin-right: 15px;
   color: gray;
 }
-
 
 .imgPerfil{
   border-radius: 50%;
@@ -177,13 +192,9 @@ i{
 }
 .hangouts{
   border: 1px solid rgb(236, 233, 233) ;
-
 }
 
-
-
-
-
+/* TODO EL MODAL*/
 /* The Modal (bg) */
 .modal {
   display: none; /* Hidden by default */
@@ -199,20 +210,74 @@ i{
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+.container{
+  margin-top: 10%;
+  border: 1px solid;
+  padding: 0;
+  width: 70%;
+  border-radius: 10px;
+  overflow: hidden;
+  background:rgb(32, 26, 26);
+  }
+
+p{
+  margin-top: 14px;
+}
+.asuntoMsgMail {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: 43px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/*el boton cierre */
-.close {
-  color: rgb(48, 47, 47);
+.header__section1{
+  background-color: #202124;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid rgb(51, 51, 51);
+}
+.container1{
+  width: 100%;
+}
+.containerFooter{
+  align-items: center;
+}
+
+.containerIconFooter{
+  margin-bottom: 2px;
+}
+
+#btnF{
+  font-size:medium;
+}
+#btn{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-left: 1px;
+  float: left;
+}
+#f2{
   float: right;
+}
+/*el boton cierre */
+.close{
+    color: rgb(236, 230, 230);
+    margin-right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close1 {
+  color: rgb(236, 230, 230);
   font-size: 28px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .close:hover,
@@ -222,3 +287,5 @@ i{
   cursor: pointer;
   
 }
+
+/* CIERRE DE TODO EL MODAL*/

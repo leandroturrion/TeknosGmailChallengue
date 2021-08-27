@@ -4,14 +4,14 @@ let vista = document.getElementById('vistaContenedorMails')
 function cargarMailsInbox() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Inbox")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/important")
     .then(response => response.json())
     .then(data => {
       let mails = data;
       mails.map(mail => {
         vistaContenedorMails.innerHTML += `
       <div class="listaMail row">
-        <div class="col-2 nombreEmail">${mail.from.name}</div> 
+        <div class="col-2 nombreEmail">${mail.from.name}</div>
         <div class="col-9 asuntoMsgMail">${mail.subject}. ${mail.message} </div>
         <div class="col-1"> <button onclick="deleteItem('${mail.id}')"> <i class="fas fa-trash"></i> </button>
       </div>`
@@ -23,7 +23,7 @@ function cargarMailsInbox() {
 function cargarMailsEnviados() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Sent")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/sent")
     .then(response => response.json())
     .then(data => {
       let mails = data;
@@ -43,7 +43,7 @@ function cargarMailsEnviados() {
 function cargarMailsBorradores() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Draft")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/draft")
     .then(response => response.json())
     .then(data => {
       let mails = data;
@@ -81,7 +81,7 @@ function cargarMailsSpam() {
 function cargarMailsPapelera() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Trash")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/trash")
     .then(response => response.json())
     .then(data => {
       let mails = data;
@@ -99,7 +99,7 @@ function cargarMailsPapelera() {
 function cargarMailsFavoritos() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Starred")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/starred")
     .then(response => response.json())
     .then(data => {
       let mails = data;
@@ -118,7 +118,7 @@ function cargarMailsFavoritos() {
 function cargarMailsImportantes() {
   vistaContenedorMails.innerHTML = ""
   document.getElementById("0").classList.add('inbox')
-  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/Important")
+  fetch("https://academia.tim.teknosgroup.com/turrion-kw93/api/messages/important")
     .then(response => response.json())
     .then(data => {
       let mails = data;
@@ -211,52 +211,53 @@ function cargarButtons() {
     .then(data => {
       let buttons = data;
       buttons.map((button, i) => {
+        console.log('button:', button)
         contenedorButton.innerHTML += `
        <div id=${button.title} class="listaButtons row">
          <a onclick="load(button)" class="col-1 nombreEmail" id=${i}>${button.title}</a>    
         </div>
-        <div id=${button.title} class="listaButtons row">
-        <a onclick="load(button)" class="col-1 nombreEmail" id=${i}>${button.title}</a>
-    </div>
-
      `
         let icon = document.createElement("i");
-        const btn = document.getElementById(button.title).getElementsByTagName("a");
+        let button_element = document.getElementById(button.title)
 
         switch (i) {
           case 0:
             icon.setAttribute("class", "bi bi-inbox-fill");
-            btn.setAttribute("onclick", "cargarMailsInbox()");
+            button_element.setAttribute('onclick','cargarMailsInbox();'); // for FF
+            button_element.onclick = function() {cargarMailsInbox();}; // for IE
             break;
           case 1:
             icon.setAttribute("class", "fas fa-paper-plane");
-            btn.setAttribute("onclick", "cargarMailsEnviados()");
+            button_element.setAttribute('onclick','cargarMailsEnviados();'); // for FF
+            button_element.onclick = function() {cargarMailsEnviados();}; // for IE
             break;
           case 2:
             icon.setAttribute("class", "fas fa-trash");
-            btn.setAttribute("onclick", "cargarMailsPapelera()");
+            button_element.setAttribute('onclick','cargarMailsPapelera();'); // for FF
+            button_element.onclick = function() {cargarMailsPapelera();}; // for IE
             break;
           case 3:
-            icon.setAttribute("class", "fas fa-star");
-            btn.setAttribute("onclick", "cargarMailsFavoritos()");
+            button_element.setAttribute('onclick','cargarMailsBorradores();'); // for FF
+            button_element.onclick = function() {cargarMailsBorradores();}; // for IE
+            icon.setAttribute("class", "fas fa-exclamation-circle");
             break;
           case 4:
-            icon.setAttribute("class", "fas fa-exclamation-circle");
-            btn.setAttribute("onclick", "cargarMailsSpam()");
+             button_element.setAttribute('onclick','cargarMailsSpam();'); // for FF
+            button_element.onclick = function() {cargarMailsSpam();}; // for IE
+            icon.setAttribute("class", "fas fa-trash");
             break;
           case 5:
-            icon.setAttribute("class", "bi bi-inbox-fill");
-            btn.setAttribute("onclick", "cargarMailsBorradores()");
+            icon.setAttribute("class", "fas fa-star");
+            button_element.setAttribute('onclick','cargarMailsFavoritos();'); // for FF
+            button_element.onclick = function() {cargarMailsFavoritos();}; // for IE
             break;
           case 6:
-            icon.setAttribute("class", "bi bi-inbox-fill");
-            btn.setAttribute("onclick", "cargarMailsImportantes()");
+             button_element.setAttribute('onclick','cargarMailsImportantes();'); // for FF
+            button_element.onclick = function() {cargarMailsImportantes();}; // for IE
+            icon.setAttribute("class", "bi bi-arrow-right-circle-fill");
             break;
         }
-
         let parent = document.getElementById(button.title)
-
-
 
         parent.appendChild(icon);
 

@@ -52,13 +52,18 @@ li{
   font-weight: bold;
   font-size: medium;
 }
-.bi-forward-fill, .bi-inbox-fill, .bi-trash , .bi-info-circle-fill, .bi-trash2 , .bi-star-fill , .bi-bookmark  {
-  color: rgb(82, 78, 78) ;
+.bi-forward-fill, .bi-trash , .bi-info-circle-fill, .bi-trash2 , .bi-star-fill , .bi-bookmark  {
+  color: rgb(15, 10, 10) ;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: large;
+  
 }
-
+.bi-inbox-fill, .bi-arrow-right-circle-fill, .fa-paper-plane, .fa-trash , .fa-exclamation-circle, .fa-star{
+  color: rgb(34, 33, 33);
+  font-size: large;
+  
+}
 
 
 .bi-search , .bi-sliders , .bi-question-circle , .bi-gear, .bi-grid-3x3-gap{
@@ -92,15 +97,12 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
-
-
 button {
   cursor: pointer;
   border-width: 0;
   background-color: #0000;
   
 }
-
 .navbar1 {
   display: flex;
   align-items: center;
@@ -144,7 +146,9 @@ button {
 
 .listaButtons{
   cursor: pointer;
+  background:white;
 }
+
 .filter__input {
   height: 1.5em;
   width: 20em;
@@ -155,27 +159,17 @@ button {
   
 }
 
-.inbox{
-  color: red;
-}
 
 a{
 text-decoration: none;
-color: #000000;
-
+color:black;
 }
 
 .listaButtons:hover{
   border-radius: 3px;
-  color: red;
   background-color: rgb(233, 232, 232);
 }
 
-i{
-  float: left;
-  margin-right: 15px;
-  color: gray;
-}
 
 .imgPerfil{
   border-radius: 50%;
@@ -217,7 +211,7 @@ i{
   width: 70%;
   border-radius: 10px;
   overflow: hidden;
-  background:rgb(32, 26, 26);
+  background: gray;
   }
 
 p{
@@ -255,8 +249,9 @@ p{
 }
 
 #btnF{
-  font-size:medium;
-}
+  float: left;
+  margin-right: 14px;
+  color: silver;}
 #btn{
   margin-right: 10px;
   margin-bottom: 5px;
@@ -265,6 +260,8 @@ p{
 }
 #f2{
   float: right;
+  margin-right: 14px;
+  color: silver;
 }
 /*el boton cierre */
 .close{
